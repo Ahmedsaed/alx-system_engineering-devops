@@ -1,0 +1,3 @@
+sudo tcpdump --interface wlp3s0 -nn port 587 -w packets.pcap
+tcpdump -nn -r -A packets.pcap //ASCII output
+tcpdump -nn -r -X packets.pcap //HEX output
