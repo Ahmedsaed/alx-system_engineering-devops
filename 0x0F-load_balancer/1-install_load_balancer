@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Installing load balancer
 
 apt-get install -y software-properties-common
