@@ -12,8 +12,8 @@ function domain_check() {
 }
 
 function subdomain_check() {
-	dig "$1"."$2" | grep -A1 'ANSWER SECTION:' | \
-	awk 'FNR == 2 {printf "The subdomain %s is a %s record and points to %s\n", var, $4, $5}' var="$1"
+	dig "${2}"."$1" | grep -A1 'ANSWER SECTION:' | \
+	awk 'FNR == 2 {printf "The subdomain %s is a %s record and points to %s\n", var, $4, $5}' var="$2"
 }
 
 
