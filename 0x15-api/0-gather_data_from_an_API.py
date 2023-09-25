@@ -23,7 +23,7 @@ if __name__ == "__main__":
             NUMBER_OF_DONE_TASKS += 1
 
     print(f"Employee {user[0].get('name')} is done "
-          "with tasks({NUMBER_OF_DONE_TASKS}/{TOTAL_NUMBER_OF_TASKS}):")
+          f"with tasks({NUMBER_OF_DONE_TASKS}/{TOTAL_NUMBER_OF_TASKS}):")
     for todo in todos:
         if todo.get("completed"):
             print(f"\t {todo.get('title')}")
