@@ -14,11 +14,11 @@ if __name__ == "__main__":
         f"https://jsonplaceholder.typicode.com/todos/?userId={id}"
     ).json()
 
-    with open(f"{user.get('id')}.csv", "w", newline="") as csv_file:
+    with open(f"{id}.csv", "w", newline="") as csv_file:
         writer = csv.writer(csv_file, quoting=csv.QUOTE_ALL)
 
         for todo in todos:
-            writer.writerow([user.get("id"),
+            writer.writerow([id,
                              user.get("username"),
                              todo.get("completed"),
                              todo.get("title")])
